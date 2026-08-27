@@ -1,0 +1,32 @@
+@import 'tailwindcss';
+
+@theme {
+  --font-sans: 'Source Sans 3', ui-sans-serif, system-ui, sans-serif;
+  --font-serif: 'Source Serif 4', ui-serif, Georgia, serif;
+
+  --color-ink: #1a1814;
+  --color-ink-muted: #5c574e;
+  --color-paper: #f7f4ef;
+  --color-paper-elevated: #fffdf9;
+  --color-rule: #e4dfd6;
+  --color-accent: #6b7f5a;
+  --color-accent-soft: #e8eee3;
+}
+
+@layer base {
+  html {
+    color-scheme: light;
+  }
+
+  body {
+    @apply m-0 min-h-dvh bg-paper font-sans text-ink antialiased;
+  }
+
+  #root {
+    @apply min-h-dvh;
+  }
+
+  a {
+    @apply text-accent underline-offset-2 transition-colors hover:underline;
+  }
+}
