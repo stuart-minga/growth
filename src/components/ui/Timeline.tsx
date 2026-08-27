@@ -1,12 +1,8 @@
+import type { Milestone } from '../../../content/milestones'
+import { formatDate } from '../../lib/formatDate'
 import { cn } from '../../lib/cn'
 
-export type TimelineItem = {
-  id: string
-  date: string
-  title: string
-  description?: string
-  achieved: boolean
-}
+export type TimelineItem = Milestone
 
 type TimelineProps = {
   items: TimelineItem[]
@@ -37,7 +33,7 @@ export function Timeline({ items, className }: TimelineProps) {
             dateTime={item.date}
             className="block font-sans text-xs tracking-wide text-ink-faint"
           >
-            {formatTimelineDate(item.date)}
+            {formatDate(item.date)}
           </time>
           <p
             className={cn(
@@ -59,17 +55,4 @@ export function Timeline({ items, className }: TimelineProps) {
       ))}
     </ol>
   )
-}
-
-function formatTimelineDate(date: string): string {
-  const parsed = new Date(`${date}T00:00:00`)
-  if (Number.isNaN(parsed.getTime())) {
-    return date
-  }
-
-  return new Intl.DateTimeFormat('en-US', {
-    year: 'numeric',
-    month: 'short',
-    day: 'numeric',
-  }).format(parsed)
 }

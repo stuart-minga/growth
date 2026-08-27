@@ -1,7 +1,8 @@
 import { cva } from 'class-variance-authority'
+import type { GoalStatus } from '../../../content/goals'
 import { cn } from '../../lib/cn'
 
-export type GoalStatus = 'not-started' | 'in-progress' | 'done'
+export type { GoalStatus }
 
 const statusVariants = cva(
   'inline-flex items-center gap-1.5 font-sans text-xs font-medium tracking-wide',

@@ -6,4 +6,10 @@ import { defineConfig } from 'vite'
 export default defineConfig({
   base: '/growth/',
   plugins: [react(), tailwindcss()],
+  optimizeDeps: {
+    include: ['buffer'],
+  },
+  define: {
+    global: 'globalThis',
+  },
 })
