@@ -6,11 +6,19 @@
 
   --color-ink: #1a1814;
   --color-ink-muted: #5c574e;
+  --color-ink-faint: #8a8478;
   --color-paper: #f7f4ef;
   --color-paper-elevated: #fffdf9;
   --color-rule: #e4dfd6;
+  --color-rule-strong: #d0c9bc;
   --color-accent: #6b7f5a;
+  --color-accent-hover: #5a6c4c;
   --color-accent-soft: #e8eee3;
+  --color-focus: #6b7f5a;
+
+  --spacing-page-x: 1.5rem;
+  --spacing-section: 3rem;
+  --max-width-page: 42rem;
 }
 
 @layer base {
@@ -26,7 +34,113 @@
     @apply min-h-dvh;
   }
 
-  a {
-    @apply text-accent underline-offset-2 transition-colors hover:underline;
+  :focus-visible {
+    @apply outline-2 outline-offset-2 outline-focus;
+  }
+
+  ::selection {
+    @apply bg-accent-soft text-ink;
+  }
+}
+
+@layer components {
+  .prose-growth {
+    @apply max-w-prose text-base leading-relaxed text-ink;
+  }
+
+  .prose-growth :where(h1, h2, h3, h4) {
+    @apply font-serif font-semibold tracking-tight text-ink;
+  }
+
+  .prose-growth :where(h1) {
+    @apply mt-0 mb-4 text-4xl;
+  }
+
+  .prose-growth :where(h2) {
+    @apply mt-10 mb-3 text-2xl;
+  }
+
+  .prose-growth :where(h3) {
+    @apply mt-8 mb-2 text-xl;
+  }
+
+  .prose-growth :where(h4) {
+    @apply mt-6 mb-2 text-lg;
+  }
+
+  .prose-growth :where(p) {
+    @apply my-4;
+  }
+
+  .prose-growth :where(a) {
+    @apply text-accent underline-offset-2 transition-colors hover:text-accent-hover hover:underline;
+  }
+
+  .prose-growth :where(strong) {
+    @apply font-semibold text-ink;
+  }
+
+  .prose-growth :where(em) {
+    @apply italic;
+  }
+
+  .prose-growth :where(ul, ol) {
+    @apply my-4 pl-5;
+  }
+
+  .prose-growth :where(ul) {
+    @apply list-disc;
+  }
+
+  .prose-growth :where(ol) {
+    @apply list-decimal;
+  }
+
+  .prose-growth :where(li) {
+    @apply my-1.5 pl-1;
+  }
+
+  .prose-growth :where(li > ul, li > ol) {
+    @apply my-1;
+  }
+
+  .prose-growth :where(blockquote) {
+    @apply my-6 border-l-2 border-rule-strong pl-4 text-ink-muted italic;
+  }
+
+  .prose-growth :where(hr) {
+    @apply my-10 border-0 border-t border-rule;
+  }
+
+  .prose-growth :where(code) {
+    @apply rounded-sm bg-accent-soft px-1 py-0.5 font-mono text-[0.9em] text-ink;
+  }
+
+  .prose-growth :where(pre) {
+    @apply my-6 overflow-x-auto rounded-sm border border-rule bg-paper-elevated p-4 text-sm leading-relaxed;
+  }
+
+  .prose-growth :where(pre code) {
+    @apply bg-transparent p-0;
+  }
+
+  .prose-growth :where(img) {
+    @apply my-6 h-auto max-w-full;
+  }
+
+  .prose-growth :where(table) {
+    @apply my-6 w-full border-collapse text-left text-sm;
+  }
+
+  .prose-growth :where(th, td) {
+    @apply border-b border-rule px-0 py-2 pr-4 align-top;
+  }
+
+  .prose-growth :where(th) {
+    @apply font-medium text-ink;
+  }
+
+  .prose-growth :where(td) {
+    @apply text-ink-muted;
   }
 }

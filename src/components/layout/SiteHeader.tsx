@@ -1,25 +1,29 @@
 import { NavLink } from 'react-router-dom'
+import { cn } from '../../lib/cn'
+import { TextLink } from '../ui/TextLink'
 
-const linkClass = ({ isActive }: { isActive: boolean }) =>
-  [
-    'font-sans text-sm tracking-wide no-underline',
+const navLinkClass = ({ isActive }: { isActive: boolean }) =>
+  cn(
+    'font-sans text-sm tracking-wide no-underline transition-colors',
     isActive ? 'text-ink' : 'text-ink-muted hover:text-ink',
-  ].join(' ')
+  )
 
 export function SiteHeader() {
   return (
     <header className="flex items-baseline justify-between gap-6 border-b border-rule py-8">
-      <NavLink
+      <TextLink
         to="/"
-        className="font-serif text-xl font-semibold tracking-tight text-ink no-underline"
+        tone="ink"
+        weight="medium"
+        className="font-serif text-xl font-semibold tracking-tight no-underline hover:no-underline"
       >
         Growth
-      </NavLink>
+      </TextLink>
       <nav className="flex gap-5" aria-label="Primary">
-        <NavLink to="/" className={linkClass} end>
+        <NavLink to="/" className={navLinkClass} end>
           Home
         </NavLink>
-        <NavLink to="/blog" className={linkClass}>
+        <NavLink to="/blog" className={navLinkClass}>
           Blog
         </NavLink>
       </nav>

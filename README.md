@@ -32,5 +32,6 @@ src/
   App.tsx                 # router
   pages/                  # Home, BlogIndex, BlogPost
   components/layout/      # SiteHeader, SiteFooter, Page
-  styles/index.css        # Tailwind + design tokens
+  components/ui/          # Button, TextLink, Prose, Status, Timeline
+  styles/index.css        # Tailwind + design tokens (quiet minimal)
 ```

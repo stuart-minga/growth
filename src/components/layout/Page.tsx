@@ -6,7 +6,7 @@ type PageProps = {
 
 export function Page({ children }: PageProps) {
   return (
-    <div className="mx-auto flex min-h-dvh w-full max-w-3xl flex-col px-6">
+    <div className="mx-auto flex min-h-dvh w-full max-w-page flex-col px-page-x">
       {children}
     </div>
   )
