@@ -2,11 +2,9 @@
 title: The purpose of this blog
 date: "2026-08-31"
 summary: Why I'm documenting my learning journey, and how I'm seeking to grow as a developer.
-tags: [journal, meta]
+tags: [journal]
 draft: false
 ---
-
-## The purpose of this blog
 
 Over the next while, I want to use this site as a place to document my experience learning, growing and pushing myself to increase my developer skillset. I'm going to avoid writing these updates with AI (almost serving as a reprieve from its omnipresence), and try and speak to each step of this process - weekly at a minimum. I'll try and share wins, losses and learnings as I go! Additionally, I hope to write some thought pieces, also known as wild ramblings.
 
