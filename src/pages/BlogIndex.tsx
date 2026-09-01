@@ -9,7 +9,7 @@ export function BlogIndex() {
       <Prose>
         <h1>Blog</h1>
         <p className="text-lg text-ink-muted">
-          Chronological writing from the journal.
+          Here you can find weekly updates on my learning journey, and some more general thoughts and reflections.
         </p>
       </Prose>
 

@@ -15,8 +15,7 @@ export function Home() {
       <Prose>
         <h1>Current focus</h1>
         <p className="text-lg text-ink-muted">
-          Standing up the journal and naming the first focus. Write weekly,
-          keep goals honest, and let the milestones mark the year.
+          Getting this page established. Clarifying my goals and milestones, and getting some posts up.
         </p>
       </Prose>
 
