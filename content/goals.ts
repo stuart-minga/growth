@@ -11,7 +11,7 @@ export const goals: Goal[] = [
   {
     id: 'write-weekly',
     title: 'Write every week',
-    description: 'Write at least one journal post each week.',
+    description: 'Write at least one journal post each week. No AI help, just my thoughts and experiences.',
     status: 'in-progress',
   },
 ]
